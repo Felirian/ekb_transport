@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 
 import ecardImg from "../assets/main/ECard.png";
 import tramImg from "../assets/main/tram.png";
+import eImg from "../assets/main/eImg.png";
+import eLogoImg from "../assets/main/eLogoImg.png";
 
 const Main = () => {
   const [tramSel] = useState(0);
@@ -163,10 +165,12 @@ const Main = () => {
         </Block3Wrapper>
 
         <Block3Wrapper id={"Block4"} style={{ textAlign: "center" }}>
-          <H2 textAlign={"center"}>Ключевые сообщения</H2>
+          <H2 textAlign={"center"} data-aos={"fade-right"}>
+            Ключевые сообщения
+          </H2>
           <InfoFrames style={{ textAlign: "left" }}>
             <DoubleFrames>
-              <MiniFrame>
+              <MiniFrame data-aos={"flip-right"}>
                 <H3>Доступность</H3>
                 <P2>
                   Наша цель — быть понятными и доступными для каждого
@@ -179,7 +183,7 @@ const Main = () => {
                   излишней декоративности
                 </P2>
               </MiniFrame>
-              <MiniFrame>
+              <MiniFrame data-aos={"flip-left"}>
                 <H3>качество</H3>
                 <P2>
                   Наш приоритет — это предоставление высокого качества. Мы
@@ -193,7 +197,7 @@ const Main = () => {
               </MiniFrame>
             </DoubleFrames>
             <DoubleFrames>
-              <MiniFrame>
+              <MiniFrame data-aos={"flip-right"}>
                 <H3>удобство</H3>
                 <P2>
                   Мы делаем перемещение по городу легким и удобным. Наши решения
@@ -205,7 +209,7 @@ const Main = () => {
                   Закругленные края, не кричащие цвета. Теплые акценты
                 </P2>
               </MiniFrame>
-              <MiniFrame>
+              <MiniFrame data-aos={"flip-left"}>
                 <H3>надежность</H3>
                 <P2>
                   Наш транспорт — это инструмент надежности и безопасности во
@@ -218,7 +222,7 @@ const Main = () => {
               </MiniFrame>
             </DoubleFrames>
             <DoubleFrames style={{ justifyContent: "center" }}>
-              <MiniFrame style={{ padding: "30px" }}>
+              <MiniFrame style={{ padding: "30px" }} data-aos={"flip-down"}>
                 <H3>для всех</H3>
                 <P2>
                   Наша миссия состоит в том, чтобы обеспечить мобильность для
@@ -233,8 +237,11 @@ const Main = () => {
             </DoubleFrames>
           </InfoFrames>
         </Block3Wrapper>
-        <Block3Wrapper>
-          <H2 textAlign={"center"}>Примеры типового графического решения</H2>
+
+        <Block3Wrapper id="Block5">
+          <H2 textAlign={"center"} data-aos={"fade-left"}>
+            Примеры типового графического решения
+          </H2>
           <Container>
             <Passers>
               <H3>проездные</H3>
@@ -246,6 +253,7 @@ const Main = () => {
               </P1>
             </Passers>
             <Image
+              data-aos={"fade-right"}
               src={ecardImg}
               alt={""}
               style={{ opacity: tramSel === 0 ? 1 : 0, paddingTop: "30px" }}
@@ -260,10 +268,48 @@ const Main = () => {
               </P1>
             </Passers>
             <Image
+              data-aos={"fade-left"}
               src={tramImg}
               alt={""}
               style={{ opacity: tramSel === 0 ? 1 : 0, paddingTop: "30px" }}
             />
+          </Container>
+          <Container>
+            <Passers>
+              <H3>Презентации/Веб-сайт</H3>
+              <P1 style={{ padding: "30px" }}>
+                На титульных слайдах презентации логотип используется без
+                подписей и располагается по центру слайда
+              </P1>
+            </Passers>
+            <LogoFrame>
+              <Image
+                data-aos={"zoom-in"}
+                src={eImg}
+                alt={""}
+                style={{
+                  opacity: tramSel === 0 ? 1 : 0,
+                  paddingTop: "30px",
+                  width: "212px",
+                  margin: "127px 156px",
+                }}
+              />
+            </LogoFrame>
+            <P1 style={{ padding: "30px" }}>
+              На веб-сайтах логотип располагается слева в шапке сайта и
+              используется подпись к логотипу
+            </P1>
+            <LogoFrame>
+              <Image
+                data-aos={"zoom-in"}
+                src={eLogoImg}
+                alt={""}
+                style={{
+                  opacity: tramSel === 0 ? 1 : 0,
+                  padding: "30px",
+                }}
+              />
+            </LogoFrame>
           </Container>
         </Block3Wrapper>
       </MainWrapper>
@@ -394,6 +440,18 @@ const Image = styled.img`
   height: auto;
   top: 0;
   transition: 0.8s ease;
+`;
+const LogoFrame = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 30px;
+  background: #dadada;
+  gap: 15px;
+  /* выделение */
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
 `;
 
 export default Main;

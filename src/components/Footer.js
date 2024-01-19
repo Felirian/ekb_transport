@@ -62,35 +62,35 @@ const Footer = () => {
 };
 
 const FooterWrapper = styled.footer`
-    width: 100%;
-    display: flex;
-    margin: 120px 0;
-    padding: 102px 509px;
-    justify-content: center;
-    align-items: center;
-    background: #d9d9d9;
+  width: 100%;
+  display: flex;
+  margin: 120px 0;
+  padding: 102px 509px 0 509px;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
 `;
 const InfoBlock = styled.div`
-    display: flex;
-    width: 1408px;
-    height: 108px;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-shrink: 0;
+  display: flex;
+  width: 1408px;
+  height: 108px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
 `;
 const ContactBlock = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
 `;
 const DevsBlock = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
 `;
 const DopBlock = styled.div`
   display: flex;
@@ -98,5 +98,5 @@ const DopBlock = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
-  `
-export default Footer
+`;
+export default Footer;
