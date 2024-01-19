@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Caption, Container, P1, P2} from "../shared/styles";
+import {Caption, P2} from "../shared/styles";
 import SvgSelector from "../shared/SvgSelector";
 
 const Footer = () => {

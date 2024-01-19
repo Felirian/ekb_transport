@@ -9,7 +9,6 @@ import {Container} from "../shared/styles";
 const Cards = (props) => {
   return (
     <Container>
-
       <CardImage src={img21} alt={''}/>
       <CardImage src={img22} alt={''}/>
       <CardImage src={img23} alt={''}/>

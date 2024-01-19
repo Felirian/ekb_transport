@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SvgSelector from "../shared/SvgSelector";
 
 import {Link} from "react-router-dom";
-import {Container, H1, P1} from "../shared/styles";
+import {P1} from "../shared/styles";
 
 const Header = () => {
   return (

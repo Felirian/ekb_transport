@@ -4,7 +4,6 @@ import Main from "./pages/Main";
 import Logo from "./pages/Logo";
 import Style from "./pages/Style";
 import Header from "./components/Header";
-import {createGlobalStyle} from "styled-components";
 import {GlobalStyle} from "./shared/styles";
 import Footer from "./components/Footer";
 
