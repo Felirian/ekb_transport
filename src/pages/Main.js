@@ -1,9 +1,10 @@
 import React from 'react';
+import SvgSelector from "../shared/SvgSelector";
 
 const Main = () => {
   return (
     <div>
-      <h1>Main</h1>
+      <SvgSelector svg={'logo-large'}/>
     </div>
   );
 };

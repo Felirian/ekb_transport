@@ -54,6 +54,18 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         //border: 1px pink solid;
     }
+    
+    body {        
+        
+    }
+    #root {
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     a {
         text-decoration: none;
