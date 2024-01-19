@@ -128,6 +128,8 @@ const Main = () => {
             </P1>
           </Frame>
         </Block3Wrapper>
+
+
       </MainWrapper>
     </Container>
   );
