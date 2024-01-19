@@ -101,6 +101,8 @@ const Main = () => {
               </Block2Segment>
             </Block2Row>
           </Block2Wrapper>
+
+
         </Frame>
 
         <Block3Wrapper id={"Block2"}>

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import styled from "styled-components";
 import AOS from "aos";
 
-const Sticky = ({pos, img, text}) => {
+const Sticky = ({pos, img, text, height}) => {
 
   useEffect(() => {
     AOS.init();
@@ -10,7 +10,7 @@ const Sticky = ({pos, img, text}) => {
   }, []);
 
   return (
-    <StickyWrapper style={{flexDirection: pos === 'left' ? 'row':'row-reverse'}} >
+    <StickyWrapper style={{flexDirection: pos === 'left' ? 'row':'row-reverse', height: height}} >
       <Image src={img} alt={''} data-aos={pos === 'left' ? "fade-right":"fade-left"}/>
       <Text data-aos={pos === 'left' ? "fade-left":"fade-right"}>
         {text}
@@ -21,7 +21,7 @@ const Sticky = ({pos, img, text}) => {
 
 const StickyWrapper = styled.div`
     width: 100%;
-    //height: 300px;
+    
     position: relative;
     top: 0;
     gap: 8px;
