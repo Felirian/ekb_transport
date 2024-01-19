@@ -51,7 +51,6 @@ export const P2 = styled.p`
     font-weight: 400;
     line-height: 22px; /* 137.5% */
 `
-
 export const Caption = styled.caption`
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -59,10 +58,6 @@ export const Caption = styled.caption`
     font-weight: 400;
     line-height: 14px; /* 140% */
 `
-
-
-
-
 export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
