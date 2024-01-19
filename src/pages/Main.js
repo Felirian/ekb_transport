@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { cloneElement, useEffect, useState } from "react";
 import SvgSelector from "../shared/SvgSelector";
 import styled from "styled-components";
 import { Container, Frame, H1, H2, H3, P1, P2 } from "../shared/styles";
@@ -6,7 +6,12 @@ import { COLOR } from "../shared/variables";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import ecardImg from "../assets/main/ECard.png";
+import tramImg from "../assets/main/tram.png";
+
 const Main = () => {
+  const [tramSel] = useState(0);
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -230,14 +235,36 @@ const Main = () => {
         </Block3Wrapper>
         <Block3Wrapper>
           <H2 textAlign={"center"}>Примеры типового графического решения</H2>
-          <Passers>
-            <H3>проездные</H3>
-            <P1 style={{ width: "600px" }}>
-              Мы используются плавные линии и формы без резких углов, чтобы
-              создать ощущение комфортного пути. На информационных носителях
-              паттерн используется в качестве фона, поэтому состоит из 4 блоков
-            </P1>
-          </Passers>
+          <Container>
+            <Passers>
+              <H3>проездные</H3>
+              <P1 style={{ width: "600px" }}>
+                Мы используются плавные линии и формы без резких углов, чтобы
+                создать ощущение комфортного пути. На информационных носителях
+                паттерн используется в качестве фона, поэтому состоит из 4
+                блоков
+              </P1>
+            </Passers>
+            <Image
+              src={ecardImg}
+              alt={""}
+              style={{ opacity: tramSel === 0 ? 1 : 0, paddingTop: "30px" }}
+            />
+          </Container>
+          <Container>
+            <Passers style={{ alignItems: "end" }}>
+              <H3 style={{ width: "600px" }}>Транспорт</H3>
+              <P1 style={{ width: "600px" }}>
+                На носителях, где паттерн является стилеобразующим элементом
+                используется 1 блок паттерна
+              </P1>
+            </Passers>
+            <Image
+              src={tramImg}
+              alt={""}
+              style={{ opacity: tramSel === 0 ? 1 : 0, paddingTop: "30px" }}
+            />
+          </Container>
         </Block3Wrapper>
       </MainWrapper>
     </Container>
@@ -361,6 +388,12 @@ const Passers = styled.div`
   align-items: flex-start;
   gap: 19px;
   align-self: stretch;
+`;
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  top: 0;
+  transition: 0.8s ease;
 `;
 
 export default Main;
