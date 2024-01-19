@@ -1,12 +1,18 @@
 import styled, {createGlobalStyle} from "styled-components";
 import MontserratFont from './fonts/Montserrat-VariableFont_wght.ttf'
 import Exo_2Font from './fonts/Exo2-VariableFont_wght.ttf'
+import {COLOR} from "./variables";
 
 export const Container = styled.div`
     width: 100%;
     max-width: 1408px;
 `
-
+export const Frame = styled.div `
+    border-radius: 30px;
+    background: #DADADA;
+    /* выделение */
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
+`
 export const H1 = styled.h1`
     font-family: 'Exo 2', sans-serif;
     font-size: 42px;
@@ -46,6 +52,16 @@ export const P2 = styled.p`
     line-height: 22px; /* 137.5% */
 `
 
+export const Caption = styled.caption`
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+`
+
+
+
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -54,9 +70,12 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         //border: 1px pink solid;
     }
-    
+    html {
+        scroll-behavior: smooth;
+        scroll-padding: 130px;
+    }
     body {        
-        
+        background-color: ${COLOR.white};
     }
     #root {
         width: 100%;

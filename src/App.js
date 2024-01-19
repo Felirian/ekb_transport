@@ -6,6 +6,7 @@ import Style from "./pages/Style";
 import Header from "./components/Header";
 import {createGlobalStyle} from "styled-components";
 import {GlobalStyle} from "./shared/styles";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
         <Route path="*" element={<Navigate to={'/'} replace/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
