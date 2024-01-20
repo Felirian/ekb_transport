@@ -19,6 +19,10 @@ import site from '../assets/site.png'
 import card1 from '../assets/cards/1.1.png';
 import card2 from '../assets/cards/1.2.png';
 
+import smalimg from '../assets/smallPage.png'
+
+
+import nav from '../assets/nav.png'
 
 import Sticky from "../components/Sticky";
 import {COLOR} from "../shared/variables";
@@ -87,6 +91,34 @@ const Media = () => {
       </Text>
 
       <img src={bigImg} alt={''} width={'1903px'} height={'7508px'}/>
+
+      <Text data-aos={"fade-up"}>
+        <P1>
+          Правила расположений и взаимодействия со стилеобразующими элементами применяется не только к трамваю, но и к
+          другим видам транспорта: автобусам, троллейбусам и метро
+        </P1>
+      </Text>
+
+      <H1 style={{color: COLOR.green}}>Навигация</H1>
+      <img src={nav} alt={''} height={'427px'}/>
+
+      <div style={{display: "flex", alignItems: "center", gap: '100px'}}>
+        <P1>
+          В качестве примера для входной вывески метро используется шаблон размерами 650 мм × 650 мм. Шаблон заливается
+          фирменным цветом, по центру располагается знак метро
+          <br/><br/>
+          За Х взята наименьшая сторона знака
+        </P1>
+        <P1>
+          В качестве примера для внутренней вывески используется шаблон размерами 600 мм × 1800 мм. В шаблоне 3
+          информационных блока: начальная станция, конечная, текущая. Текущая станция акцентируемая
+          <br/><br/>
+          За Х взято обозначение текущей станции
+        </P1>
+      </div>
+
+
+      <img src={smalimg} alt={''} width={'1903px'} height={'2310px'}/>
 
       <H1 style={{color: COLOR.green}}>Проездные</H1>
       <Sticky
