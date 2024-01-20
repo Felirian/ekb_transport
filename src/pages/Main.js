@@ -96,7 +96,7 @@ const Main = () => {
               </Block2Segment>
               <Block2Segment>
                 <H3>Слоган</H3>
-                <P1>Больше чем просто транспорт</P1>
+                <P1>Больше, чем просто транспорт</P1>
               </Block2Segment>
             </Block2Row>
           </Block2Wrapper>

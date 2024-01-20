@@ -6,11 +6,13 @@ import Style from "./pages/Style";
 import Header from "./components/Header";
 import {GlobalStyle} from "./shared/styles";
 import Footer from "./components/Footer";
+import PageUp from "./components/PageUp";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle/>
+      <PageUp/>
       <Header/>
       <Routes>
         <Route path={'/*'} element={<Main/>}/>
