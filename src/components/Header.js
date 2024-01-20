@@ -1,27 +1,29 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from "styled-components";
 import SvgSelector from "../shared/SvgSelector";
 
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {HoverLink, P1} from "../shared/styles";
+import {COLOR} from "../shared/variables";
 
 const Header = () => {
+  const location = useLocation();
   return (
     <HeaderWrapper>
       <HeaderContainer>
         <SvgSelector svg={'logo'}/>
         <Links>
           <Link to={'/'}>
-            <HoverLink>Главная</HoverLink>
+            <HoverLink style={{color: location.pathname === "/" ? COLOR.green : ''}}>Главная</HoverLink>
           </Link>
           <Link to={'/logo'}>
-            <HoverLink>Логотип</HoverLink>
+            <HoverLink style={{color: location.pathname === "/logo" ? COLOR.green : ''}}>Логотип</HoverLink>
           </Link>
           <Link to={'/style'}>
-            <HoverLink>Стиль</HoverLink>
+            <HoverLink style={{color: location.pathname === "/style" ? COLOR.green : ''}}>Стиль</HoverLink>
           </Link>
           <Link to={'/media'}>
-            <HoverLink>Носители</HoverLink>
+            <HoverLink style={{color: location.pathname === "/media" ? COLOR.green : ''}}>Носители</HoverLink>
           </Link>
         </Links>
       </HeaderContainer>
