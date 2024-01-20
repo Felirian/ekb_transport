@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import SvgSelector from "../shared/SvgSelector";
 import styled from "styled-components";
-import { Container, Frame, H1, H2, H3, P1, P2 } from "../shared/styles";
+import {Container, Frame, H1, H2, H3, HoverLink, P1, P2} from "../shared/styles";
 import { COLOR } from "../shared/variables";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -45,22 +45,21 @@ const Main = () => {
             <H2>Содержание</H2>
             <NavList>
               <a href={"#Block1"}>
-                <P1>
-                  🡦 Введение. Миссия. Слоган. Позиционирование. Целевая
-                  аудитория
-                </P1>
+                <HoverLink>
+                  🡦 Введение. Миссия. Слоган. Позиционирование. ЦA
+                </HoverLink>
               </a>
               <a href={"#Block2"}>
-                <P1>🡦 Задачи рекламной кампании</P1>
+                <HoverLink>🡦 Задачи рекламной кампании</HoverLink>
               </a>
               <a href={"#Block3"}>
-                <P1>🡦 Креативная концепция и визуальная стратегия</P1>
+                <HoverLink>🡦 Креативная концепция и визуальная стратегия</HoverLink>
               </a>
               <a href={"#Block4"}>
-                <P1>🡦 Ключевые сообщения</P1>
+                <HoverLink>🡦 Ключевые сообщения</HoverLink>
               </a>
               <a href={"#Block5"}>
-                <P1>🡦 Примеры типового решения</P1>
+                <HoverLink>🡦 Примеры типового решения</HoverLink>
               </a>
             </NavList>
           </Block1Column>

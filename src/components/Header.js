@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SvgSelector from "../shared/SvgSelector";
 
 import {Link} from "react-router-dom";
-import {P1} from "../shared/styles";
+import {HoverLink, P1} from "../shared/styles";
 
 const Header = () => {
   return (
@@ -12,16 +12,16 @@ const Header = () => {
         <SvgSelector svg={'logo'}/>
         <Links>
           <Link to={'/'}>
-            <P1>Главная</P1>
+            <HoverLink>Главная</HoverLink>
           </Link>
           <Link to={'/logo'}>
-            <P1>Логотип</P1>
+            <HoverLink>Логотип</HoverLink>
           </Link>
           <Link to={'/style'}>
-            <P1>Стиль</P1>
+            <HoverLink>Стиль</HoverLink>
           </Link>
           <Link to={'/media'}>
-            <P1>Носители</P1>
+            <HoverLink>Носители</HoverLink>
           </Link>
         </Links>
       </HeaderContainer>

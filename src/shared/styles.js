@@ -56,8 +56,33 @@ export const Caption = styled.caption`
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 140% */
+    line-height: 14px; /* 140% */    
 `
+
+export const HoverLink = styled.p`
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; /* 150% */
+    
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1.5px;
+    transition: background-size 0.5s;
+
+    &:hover {
+        background-size: 100% 1.5px;
+
+    }
+
+`
+
+
+
+
 export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
@@ -84,6 +109,8 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+        
+        
     }
 
     @font-face {
