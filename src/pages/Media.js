@@ -2,10 +2,14 @@ import React from 'react';
 import Cards from "../components/Cards";
 import TramSlider from "../components/TramSlider";
 import {Container, H1, P1, P2} from "../shared/styles";
+
+import bigImg from '../assets/fullPage.png'
+
 import card1 from '../assets/cards/1.1.png';
 import card2 from '../assets/cards/1.2.png';
 import Sticky from "../components/Sticky";
 import {COLOR} from "../shared/variables";
+import styled from "styled-components";
 
 const Media = () => {
   return (
@@ -18,6 +22,8 @@ const Media = () => {
           палитре транспорта
         </P1>
       </div>
+
+      <img src={bigImg} alt={''} width={'1903px'} height={'7508px'}/>
 
       <H1 style={{color: COLOR.green}}>Проездные</H1>
 
@@ -69,5 +75,10 @@ const Media = () => {
     </Container>
   );
 };
+
+const Text = styled.div`
+    max-width: 100px;
+    width: 100%;
+`
 
 export default Media;

@@ -30,7 +30,7 @@ const Style = () => {
           цветовая палитра
         </H1>
         <StyleBlock>
-          <Image src={colorsImg} alt={""} style={{ padding: "37px" }} />
+          <Image src={colorsImg} alt={""} style={{ padding: "37px" }}  height={'554px'}/>
         </StyleBlock>
       </Container>
       <Container
@@ -92,7 +92,7 @@ const Style = () => {
           </P1>
         </FontBlock>
       </Container>
-      <Image src={pattern} alt={""} />
+      <Image src={pattern} alt={""} width={'1903px'}/>
       <FontBlock style={{ padding: "0" }}>
         <P1 style={{ width: "931px" }}>
           При использовании паттерна на информационных носителях следует
