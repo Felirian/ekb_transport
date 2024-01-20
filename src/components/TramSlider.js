@@ -25,10 +25,11 @@ const TramSlider = () => {
         <Image src={img2} alt={''} style={{opacity: tramSel === 2 ? 1 : 0}}/>
         <Image src={img3} alt={''} style={{opacity: tramSel === 3 ? 1 : 0}}/>
       </ImegeWrapper>
-
     </div>
   );
 };
+
+
 
 const ImegeWrapper = styled.div`
     position: relative;
